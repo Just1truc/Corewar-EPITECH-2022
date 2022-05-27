@@ -74,7 +74,7 @@ make
 | Total | 100% |
 
 ### Total (Keynote / Global)
-| ** Description ** | ** Mark ** |
+| **Description** | **Mark** |
 |:-----------------:|:----------:|
 | Preliminary | 2/2 |
 | Assembler | 10/10 |
