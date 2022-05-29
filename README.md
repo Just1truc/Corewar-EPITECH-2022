@@ -69,6 +69,22 @@ Once it's done, the first line should specify the name of the champion :
 ```asm
 .name "[NAME]"
 ```
+And the second one should specify the description of the champion :
+```asm
+.commen "[DESCRIPTION]"
+```
+
+After that, each line should be formatted the following way:
+```asm
+[label](command)(arguments)
+```
+A label should be regarded as a checkpoint. It's marking a position in the code of the champion end it's followed by a ``:``.
+The label is always optionnal.
+
+Howerver, the command and it's arguments are mandatory.
+Each command take specific types of arguments has a parameter, everything is specified in the *All Instruction* section.
+
+If any of this rules is not followed, the program will not compile and will return 84 as an error status.
 
 **Usage:**
 
