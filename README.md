@@ -48,16 +48,56 @@ Each process (champions) has :
 | 0x10 (aff) |  Takes 1 parameter, which must be a register. It displays on the standard output the character whose ASCII code is the content of the register (in base 10). A 256 modulo is applied to this ASCII code. *aff r3* displays ’*’ if *r3* contains *42*.
 
 ### ASM
-ASM part.
+
+The ASM part is about compiling redcode files ``.s`` into byte code files ``.cor`` and verifying if this code is correct.
+You can create your *own* champions and compile them using this part of the project to use them inside the VM part.
+
+**Check_error:**
+
+The compiler is checked by the moulinette.
+Here's a proof of quality:
+
+![image](https://user-images.githubusercontent.com/68695857/170875173-b559b0f3-dac7-48da-9607-4a0d4d9b601d.png)
+
+In redcode, there is some cleaning to do before parsing the code.
+
+First, we got rid of the comments. (begin with a ``#``).
+
+Then, each line should be splitted using the following characters : ``" ", "\t", ","``.
+
+Once it's done, the first line should specify the name of the champion :
+```asm
+.name "[NAME]"
+```
+
+**Usage:**
+
+In order to use the asm part, you have to get into the asm folder.
+From the root of the repository, execute this command:
+```bash
+cd asm
+```
+
+In order to compile a champion (``.s``)
+```shell
+./asm champion_file[.s]
+```
+If you need help, just use the ``-h`` option:
+```shell
+./asm -h
+```
 
 # Install the project
+
 ```bash
-git clone https://github.com/Just1Truc/Corewar.git
-cd Corewar
+git clone git@github.com:Just1truc/Corewar-EPITECH-2022.git
+cd Corewar-EPITECH-2022
 make
 ```
 
 # Use the project
+
+From the root of the repository:
 ```bash
 ./asm/asm [file.s]
 ./corewar/corewar [file.cor] [file.cor] ...
