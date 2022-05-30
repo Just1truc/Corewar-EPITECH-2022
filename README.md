@@ -71,7 +71,7 @@ Once it's done, the first line should specify the name of the champion :
 ```
 And the second one should specify the description of the champion :
 ```asm
-.commen "[DESCRIPTION]"
+.comment "[DESCRIPTION]"
 ```
 
 After that, each line should be formatted the following way:
